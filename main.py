@@ -1,19 +1,39 @@
 import cohere
 import streamlit as st
 
-st.write("HELLO WORLD")
+co = cohere.Client('4SXKn5PZBWm6elQFZ2JCum7JchNaqxyCG2F9y2mz')
 
-co = cohere.Client('knET4NqdcT9EKSuN0tkxYpdrxHOu2MutKZ7n7IRk')
-response = co.generate(
-    model='xlarge',
-    prompt='This program generates mental health coping mechanisms from simple commands given an problem. Here are some examples:\nCommand: I am depressed\nEmotion: depression\nResponse: When feeling depressed, go eat something sweet\n--\nCommand: I am suicidal\nEmotion: suicide\nResponse: Let\'s start off by listing the things you are greatful for\n--\nCommand: I am having an anxiety attack\nEmotion: anxiety\nResponse: Start by taking some deep breaths. \n--\nCommand: I am panicking\nEmotion: panic\nResponse: Imagine you are somewhere calm, like the beach.\n--\nCommand: I am nervous\nEmotion: nervous\nResponse: Hold your hands under cold water\n--\nCommand: I need strategies to help with my depression',
-    max_tokens=50,
-    temperature=0.9,
-    k=0,
-    p=0.75,
-    frequency_penalty=0,
-    presence_penalty=0,
-    stop_sequences=[],
-    return_likelihoods='NONE')
-print('Prediction: {}'.format(response.generations[0].text))
-st.write('Prediction: {}'.format(response.generations[0].text))
+
+
+def mental_support(problem):
+    text_file = open("training.txt", "r")
+    data = text_file.read()
+
+    response = co.generate(
+        model='xlarge',
+        prompt=data + " " + problem + "\nStrategy: ",
+        max_tokens=100,
+        temperature=1,
+        k=0,
+        p=0.7,
+        frequency_penalty=0.1,
+        presence_penalty=0,
+        stop_sequences=["--"])
+    # st.write('Predict: {}'.format(response.generations[0].text))
+
+    response = response.generations[0].text
+    response = response.replace("\n\n--", "").replace("\n--", "").strip()
+    st.write(response)
+    return response
+
+
+def main():
+
+    problem = st.text_input('What seems to be the problem?\n', '')
+    # problem = input("Enter problem:")
+    response = mental_support(problem)
+    print(response)
+
+
+if __name__ == "__main__":
+    main()
