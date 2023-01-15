@@ -1,0 +1,50 @@
+'This program generates mental health coping mechanisms from simple commands given a problem. Here are some examples:
+Problem: I am depressed
+Keywords: depression
+Strategy: When feeling depressed, go eat something sweet
+--
+Problem: I am suicidal
+Keywords: suicide
+Strategy: Let\'s start off by listing the things you are grateful for
+--
+Problem: I am having an anxiety attack
+Keywords: anxiety
+Strategy: Start by taking some deep breaths.
+--
+Problem: I am panicking
+Keywords: panic
+Strategy: Imagine you are somewhere calm, like the beach.
+--
+Problem: How do I deal with anxiety
+Keywords: fear, worry, panic attack
+Strategy: Use calming breathing exercises. Eat a healthy diet with regular meals to keep your energy levels stable
+--
+Problem: I am feeling depressed
+Keywords: sadness, low self-esteem, suicidal
+Strategy: Thank you for reaching out for help. Try talking about your feelings to a friend, family member, health professional or counsellor.
+--
+Problem: I am suffering from an eating disorder.
+Keywords: body image, abnormal eating, purging
+Strategy: Work with a registered dietitian who specializes in eating disorders.
+--
+Problem: I am addicted to alcohol and/or drugs
+Keywords: substance abuse, physical addiction, withdrawal
+Strategy: Talk to your doctor about detoxification procedures from a trusted rehab facility.
+--
+Problem: I have difficulty sleeping
+Keywords: Insomnia
+Strategy: Try to get into a regular sleep schedule by setting a consistent bedtime routine that might include taking a warm bath before bed, use one of the relaxation strategies below, and avoid stimulating activities in the two hours before going to bed.
+--
+Problem: What are some steps I can take to stop a panic attack?
+Keywords: panic attack, anxiety, coping
+Strategy: 1. breathe in as slowly, deeply and gently as you can, through your nose.\n 2. breathe out slowly, deeply and gently through your mouth.\n 3. count steadily from 1 to 5 on each in-breath and each out-breath.\n 4. close your eyes and focus on your breathing.
+--
+Problem: I am crying
+Keywords: sadness
+Strategy: Crying is a normal response to pain, frustration and stress. Sometimes, people will cry when they feel embarrassed, ashamed, sad, hurt, angry or when they are grieving. It can also be caused by being too tired or stressed. Can you specify why you\'ve been crying?
+--
+Problem: I can\'t stop crying
+Keywords: sadness
+Strategy: You might be going through a lot right now. It\'s important to look after yourself. Crying can be helpful because it helps you to let out your emotions. Sometimes it\'s helpful to talk to someone you trust about how you\'re feeling. There will always be someone willing to help you.
+--
+Problem: '
